@@ -180,10 +180,13 @@ early:
   ```
 * For even more Sun Microsystems reminiscence, switch to black on white.
   In `/boot/loader.conf` set `teken.fg_color="0"` and `teken.bg_color="7"`.
-* To use the FreeBSD logo with inverted colors, edit `/boot/lua/drawer.lua`.
-  Look for the assignment
-  `image = "/boot/images/freebsd-brand-rev.png"` and replace it with
-  `image = "/boot/images/freebsd-brand.png"`.
+* To use the FreeBSD logo with inverted colors:
+    * (FreeBSD 14.3 and earlier) edit `/boot/lua/drawer.lua`.
+      Look for the assignment
+      `image = "/boot/images/freebsd-brand-rev.png"` and replace it with
+      `image = "/boot/images/freebsd-brand.png"`.
+    * (FreeBSD 15+) edit `/boot/loader.conf`, add this line
+      `splash="/boot/images/freebsd-brand.png"`.
 
 ### Linux, NetBSD, OpenBSD Console
 
