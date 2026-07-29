@@ -429,3 +429,10 @@ them. This is the mapping:
 
 * Describe how to contribute.
 * Commit 12x22 for loader use to FreeBSD once code slush is over.
+
+## PSF generation
+Linux uses .psf font files for the console, in order to create this file I used bdf2psf with the following command 
+```sh
+bdf2psf --fb ./gallant.bdf /nix/store/h5cqxxs4vnrp4gn4l9g5iinsmi2i1vqi-bdf2psf-1.248//share/bdf2psf/standard.equivalents /nix/store/h5cqxxs4vnrp4gn4l9g5iinsmi2i1vqi-bdf2psf-1.248//share/bdf2psf/fontsets/Uni1.512 512 ./gallant.psf
+```
+note that the specific store path to bdf2psf will likely be different.
